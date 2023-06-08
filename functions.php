@@ -4,6 +4,7 @@ add_action(
     'wp_enqueue_scripts',
     function () {
         wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+        wp_enqueue_style( 'utilities-css', get_stylesheet_directory_uri() . '/utilities.css' );
 
         wp_enqueue_style(
             'typekit',
@@ -34,14 +35,6 @@ add_action(
                 filemtime(get_stylesheet_directory() . '/js/front-page.js'),
                 true
             );
-
-            $fpHeroData = get_field('hero', get_option('page_on_front'));
-            $fpContentHubData = get_field('content_hub', get_option('page_on_front'));
-            wp_localize_script('incompass-fp', 'icfp', [
-                'restUrl' => get_rest_url(),
-                'videoId' => $fpHeroData['youtube_video_id'],
-                'contentHubCats' => $fpContentHubData['categories']
-            ]);
         }
     }
 );
@@ -97,6 +90,15 @@ function libby_excerpt($limit) {
       return $excerpt;
 }
 
+function custom_truncate($text, $length, $suffix = '...') {
+    if (strlen($text) > $length) {
+        $text = substr($text, 0, $length);
+        $text = substr($text, 0, strrpos($text, ' '));
+        $text .= $suffix;
+    }
+    return $text;
+}
+
 /**
  * Add Google Tag code after opening body tag.
  */
@@ -114,3 +116,10 @@ add_filter(
         return $args;
     },
 10, 3);
+
+
+//Add Second Footer Menu
+function register_new_menu() {
+    register_nav_menu('footer-secondary-menu',__( 'Footer Secondary Menu' ));
+    }
+add_action( 'init', 'register_new_menu' );

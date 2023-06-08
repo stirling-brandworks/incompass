@@ -1,13 +1,12 @@
 /*
- Theme Name:     Life Links Class
- Theme URI:      https://www.elegantthemes.com/gallery/divi/
- Description:    Divi Child Theme developed by Stirling, Inc
- Author:         Stirling
- Author URI:     https://www.stboston.com
+ Theme Name:     Incompass (Life Links Class)
+ Theme URI:      https://www.incompasshs.org/
+ Description:    Divi Child Theme developed by Stirling Brandworks, Inc
+ Author:         Stirling Brandworks
+ Author URI:     https://www.stirlingbrandworks.com
  Template:       Divi
- Version:        1.0.0
+ Version:        2.0.0
 */
- 
  
 /* =Theme customization starts here
 ------------------------------------------------------- */
@@ -25,6 +24,10 @@
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font-family-heading);
+}
+
+a {
+	color: var(--color-purple);
 }
 
 /*Header + Main Menu*/
@@ -296,7 +299,6 @@ html body #page-container .et_pb_section .et_pb_button{
 /*Footer*/
 #main-footer {
 	font-weight: 300;
-	border-top: 8px solid var(--color-teal);
 	color: #fff;
 	padding-top: 4rem;
 	text-align: center;
@@ -318,10 +320,6 @@ html body #page-container .et_pb_section .et_pb_button{
 	color: inherit;
 }
 
-#main-footer a {
-	border-bottom: 1px solid #fff;
-}
-
 #main-footer .ic-footer__title {
 	font-size: 3rem;
 	position: relative;
@@ -338,50 +336,53 @@ html body #page-container .et_pb_section .et_pb_button{
 	transform: translate(-50%,2rem);
 }
 
-#footer-widgets {
-	margin-bottom: 4rem;
+.f-widget{
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 
-.footer-widget {
-	text-align: center;
+#main-footer a {
+	color: #fff;
 }
 
-#main-footer .footer-widget {
-	margin: 0;
+@media(min-width:768px){
+	.f-widget{
+		margin-top: 0;
+		margin-bottom: 0;
+	}
 }
 
-#main-footer .footer-widget > * {
-	margin: 0 auto;
+.f-widget .et_pb_widget{
 	float: none;
 }
 
-.footer-widget .title {
+.f-widget .title {
+	color: #fff;
 	margin-bottom: 1rem;
 	font-size: 1.5em;
+	position: relative;
+	text-align: center;
 }
 
-.footer-widget p {
-	margin-bottom: 0;
+@media(min-width:768px){
+	.f-widget .title {
+		text-align: left;;
+	}
 }
 
-#footer-bottom {
-	font-size: 0.8em;
-	padding: 8px 0 5px;
-	line-height: 1.1;
+.f-widget .title:after{
+	content: '';
+	display: block;
+	width: 1.7rem;
+	height: 4px;
+	background-color: #fff;
+	margin: 1rem auto 0 auto;
 }
 
-#footer-info {
-	padding-bottom: 0;
-}
-
-.ic-footer-menu {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	padding-bottom: 3rem;
-	margin-bottom: 3rem;
-	border-bottom: 1px solid #fff;
+@media(min-width:768px){
+	.f-widget .title:after{
+		margin: 1rem 0 0 0;
+	}
 }
 
 .ic-footer-menu__logo {
@@ -396,12 +397,7 @@ html body #page-container .et_pb_section .et_pb_button{
 }
 
 .ic-footer-menu__nav {
-	display: flex;
 	list-style: none;
-}
-
-.ic-footer-menu__nav li:not(:last-of-type) {
-	margin-right: 1rem;
 }
 
 .ic-footer-socket {
@@ -433,12 +429,14 @@ html body #page-container .et_pb_section .et_pb_button{
 #main-footer .ctct-inline-form .ctct-form-custom .ctct-form-field {}
 #main-footer .ctct-inline-form .ctct-form-custom .ctct-form-button {
 	align-self: center;
-	text-transform: lowercase;
+	text-transform: uppercase;
 	background: #fff;
-	color: var(--color-deep-purple);
+	color: var(--color-purple);
 	border: none;
-	font-family: var(--font-family-heading);
+	border-radius: 0;
 	width: auto;
+	position: relative;
+	top: -4px;
 	justify-self: flex-start;
 	padding-left: 1.5em;
 	padding-right: 1.5em;
@@ -451,7 +449,6 @@ html body #page-container .et_pb_section .et_pb_button{
 
 #main-footer div.ctct-form-embed form.ctct-form-custom input.ctct-form-element{
 	background: transparent;
-	border-radius: 30px;
 	color: var(--color-light);
 }
 
@@ -462,7 +459,6 @@ html body #page-container .et_pb_section .et_pb_button{
 .ic-footer-social__nav {
 	display: flex;
 	list-style: none;
-	justify-content: flex-end;
 }
 
 .ic-footer-social__nav li:not(:last-of-type) {
@@ -480,13 +476,6 @@ html body #page-container .et_pb_section .et_pb_button{
 	#main-footer .container{
 		max-width: 82%;
 	}
-
-	#footer-widgets {
-		display: flex;
-		justify-content: center;
-		margin-bottom: 4rem;
-	}
-
 	.ic-footer-socket {
 		display: flex;
 	}
@@ -1280,4 +1269,10 @@ html body #page-container .et_pb_section .button--custom-st.et_pb_button:focus{
 
 .careers-body {
 	margin-bottom: 2rem;
+}
+
+
+/*V2*/
+.home #main-header {
+	position: absolute;
 }

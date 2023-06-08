@@ -16,9 +16,6 @@
 				<a href="<?php echo the_permalink();?>" class="news-item--st news-item--st--half news-item--st--no-img">
 			<?php }?>
 			
-			
-			
-			
 				<div class="news-item--st__cat news-item--st__cat--<?php $category = get_the_category(); echo $category[0]->slug;?>"><?php $category = get_the_category(); echo $category[0]->cat_name;?></div>
 				<div class="news-item--st__caption news-item--st__caption--bottom">
 					<div class="news-item--st__caption__inner">

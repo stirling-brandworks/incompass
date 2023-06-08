@@ -6,6 +6,7 @@
             "key": "field_5f721c4ddbee0",
             "label": "Hero",
             "name": "hero",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -21,6 +22,7 @@
                     "key": "field_5f721d2295156",
                     "label": "Background Image",
                     "name": "background_image",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 1,
@@ -53,6 +55,7 @@
                     "key": "field_5f721d0f95155",
                     "label": "Primary Heading",
                     "name": "primary_heading",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 1,
@@ -72,6 +75,7 @@
                     "key": "field_621d2e93b893d",
                     "label": "Hero Button Link",
                     "name": "hero_button_link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -89,6 +93,7 @@
             "key": "field_621d3be473eb7",
             "label": "Careers",
             "name": "careers",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -104,6 +109,7 @@
                     "key": "field_621d3c98d4f9e",
                     "label": "Section Title",
                     "name": "section_title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -123,6 +129,7 @@
                     "key": "field_623cdc6be72b6",
                     "label": "Section Body",
                     "name": "section_body",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -142,6 +149,7 @@
                     "key": "field_621d3c0073eb8",
                     "label": "Career Card",
                     "name": "career_card",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -155,12 +163,13 @@
                     "min": 0,
                     "max": 0,
                     "layout": "table",
-                    "button_label": "",
+                    "button_label": "Add Row",
                     "sub_fields": [
                         {
                             "key": "field_621d3c2c2e783",
                             "label": "Position Title",
                             "name": "position_title",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -174,12 +183,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_621d3c0073eb8"
                         },
                         {
                             "key": "field_621d3c472e784",
                             "label": "Position Description",
                             "name": "position_description",
+                            "aria-label": "",
                             "type": "textarea",
                             "instructions": "",
                             "required": 0,
@@ -193,12 +204,14 @@
                             "placeholder": "",
                             "maxlength": "",
                             "rows": "",
-                            "new_lines": ""
+                            "new_lines": "",
+                            "parent_repeater": "field_621d3c0073eb8"
                         },
                         {
                             "key": "field_621d3c552e785",
                             "label": "Link to Posting",
                             "name": "link_to_posting",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -212,9 +225,31 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_621d3c0073eb8"
                         }
-                    ]
+                    ],
+                    "rows_per_page": 20
+                },
+                {
+                    "key": "field_624ca91e9da10",
+                    "label": "Section Footer",
+                    "name": "section_footer",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "new_lines": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "rows": ""
                 }
             ]
         },
@@ -222,6 +257,7 @@
             "key": "field_5f9c3bd180f32",
             "label": "Content Hub",
             "name": "content_hub",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -237,6 +273,7 @@
                     "key": "field_5f9c431cf666d",
                     "label": "Categories",
                     "name": "categories",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 1,
@@ -256,6 +293,7 @@
                             "key": "field_5f9c4330f666e",
                             "label": "Category",
                             "name": "category",
+                            "aria-label": "",
                             "type": "taxonomy",
                             "instructions": "",
                             "required": 1,
@@ -272,12 +310,14 @@
                             "save_terms": 0,
                             "load_terms": 0,
                             "return_format": "id",
-                            "multiple": 0
+                            "multiple": 0,
+                            "parent_repeater": "field_5f9c431cf666d"
                         },
                         {
                             "key": "field_5f9c434bf666f",
                             "label": "Featured Post",
                             "name": "featured_post",
+                            "aria-label": "",
                             "type": "post_object",
                             "instructions": "",
                             "required": 1,
@@ -294,9 +334,11 @@
                             "allow_null": 0,
                             "multiple": 0,
                             "return_format": "id",
-                            "ui": 1
+                            "ui": 1,
+                            "parent_repeater": "field_5f9c431cf666d"
                         }
-                    ]
+                    ],
+                    "rows_per_page": 20
                 }
             ]
         },
@@ -304,6 +346,7 @@
             "key": "field_623cdafb96e30",
             "label": "Statistic Header",
             "name": "statistic_header",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -323,6 +366,7 @@
             "key": "field_5f7225c189c1b",
             "label": "Statistics",
             "name": "statistics",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -342,6 +386,7 @@
                     "key": "field_5f723c7fe4bd6",
                     "label": "Icon",
                     "name": "icon",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 1,
@@ -360,12 +405,14 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "",
+                    "parent_repeater": "field_5f7225c189c1b"
                 },
                 {
                     "key": "field_5f7225e689c1d",
                     "label": "Value",
                     "name": "value",
+                    "aria-label": "",
                     "type": "number",
                     "instructions": "",
                     "required": 1,
@@ -381,12 +428,14 @@
                     "append": "",
                     "min": 0,
                     "max": "",
-                    "step": ""
+                    "step": "",
+                    "parent_repeater": "field_5f7225c189c1b"
                 },
                 {
                     "key": "field_5f7225d789c1c",
                     "label": "Label",
                     "name": "label",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 1,
@@ -400,14 +449,17 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_5f7225c189c1b"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         },
         {
             "key": "field_623354c78957e",
             "label": "Program Cards",
             "name": "program_cards",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -423,6 +475,7 @@
                     "key": "field_623354d48957f",
                     "label": "Section Heading",
                     "name": "section_heading",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -442,6 +495,7 @@
                     "key": "field_6233553689580",
                     "label": "Section Content",
                     "name": "section_content",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -461,6 +515,7 @@
                     "key": "field_6233555689581",
                     "label": "Section Cards",
                     "name": "section_cards",
+                    "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -474,12 +529,13 @@
                     "min": 0,
                     "max": 0,
                     "layout": "table",
-                    "button_label": "",
+                    "button_label": "Add Row",
                     "sub_fields": [
                         {
                             "key": "field_6233557b89582",
                             "label": "Title",
                             "name": "title",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -493,12 +549,14 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": "",
-                            "maxlength": ""
+                            "maxlength": "",
+                            "parent_repeater": "field_6233555689581"
                         },
                         {
                             "key": "field_6233558b89583",
                             "label": "Content",
                             "name": "content",
+                            "aria-label": "",
                             "type": "textarea",
                             "instructions": "",
                             "required": 0,
@@ -512,12 +570,14 @@
                             "placeholder": "",
                             "maxlength": "",
                             "rows": "",
-                            "new_lines": ""
+                            "new_lines": "",
+                            "parent_repeater": "field_6233555689581"
                         },
                         {
                             "key": "field_62337b153874f",
                             "label": "Link",
                             "name": "link",
+                            "aria-label": "",
                             "type": "link",
                             "instructions": "",
                             "required": 0,
@@ -527,14 +587,17 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array"
+                            "return_format": "array",
+                            "parent_repeater": "field_6233555689581"
                         }
-                    ]
+                    ],
+                    "rows_per_page": 20
                 },
                 {
                     "key": "field_623ccdc8c5e5e",
                     "label": "Section Hero Image",
                     "name": "section_hero_image",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -561,6 +624,7 @@
             "key": "field_5f72262a84ac7",
             "label": "Gallery Grid",
             "name": "gallery",
+            "aria-label": "",
             "type": "gallery",
             "instructions": "",
             "required": 0,
@@ -588,9 +652,9 @@
     "location": [
         [
             {
-                "param": "page_type",
+                "param": "page",
                 "operator": "==",
-                "value": "front_page"
+                "value": "123"
             }
         ]
     ],
@@ -605,5 +669,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1649168340
+    "modified": 1685467920
 }
