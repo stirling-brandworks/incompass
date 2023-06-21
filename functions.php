@@ -123,3 +123,13 @@ function register_new_menu() {
     register_nav_menu('footer-secondary-menu',__( 'Footer Secondary Menu' ));
     }
 add_action( 'init', 'register_new_menu' );
+
+//Add Shortcodes
+require_once('shortcodes.php');
+
+//Add Slick Slider
+function enqueue_slick_slider() {
+    wp_enqueue_style('slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+    wp_enqueue_script('slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '1.8.1', true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_slick_slider');

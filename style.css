@@ -1272,7 +1272,108 @@ html body #page-container .et_pb_section .button--custom-st.et_pb_button:focus{
 }
 
 
-/*V2*/
+/* V2 */
 .home #main-header {
 	position: absolute;
+}
+
+/* Single Program Page */
+.full-height-img .et_pb_image_wrap {
+	height: 100%;
+}
+
+.full-height-img .et_pb_image_wrap img{
+	object-fit: cover;
+}
+
+/* Category Tags */
+.category-tags ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.category-tags ul li{
+	list-style: none !important;
+	display: inline-block;
+	margin: 0 0 0 0.7rem;
+	padding: 0;
+}
+
+.category-tags ul li:first-child{
+	margin-left: 0;
+}
+
+.category-tags a {
+	color: #fff !important;
+	text-transform: uppercase;
+	background: rgba(221, 229, 237, 0.3);
+	padding: 6px;
+	font-weight: 800 !important;
+	font-size: 0.7rem;
+	transition: 0.25s background ease;
+}
+
+.category-tags a:hover,
+.category-tags a:active,
+.category-tags a:focus {
+	background: rgba(221, 229, 237, 0.5);
+}
+
+/* Buttons */
+html body #page-container .et_pb_section .et_pb_button.et_pb_button--navy {
+	color: #211747 !important;
+	border-color: #211747 !important;
+	background: transparent !important;
+	background-color: transparent !important;
+	transition: 0.25s all ease !important;
+}
+
+html body #page-container .et_pb_section .et_pb_button.et_pb_button--navy:hover,
+html body #page-container .et_pb_section .et_pb_button.et_pb_button--navy:active,
+html body #page-container .et_pb_section .et_pb_button.et_pb_button--navy:focus {
+	color: #fff !important;
+	border-color: #211747 !important;
+	background: #211747 !important;
+	background-color: #211747 !important;
+}
+
+/* Columns in Special Section */
+.columns-on-lg-screens .et_pb_column_inner{
+	min-width: 100% !important;
+	margin-bottom: 2rem !important;
+}
+
+@media(min-width: 781px){
+	.columns-on-lg-screens .et_pb_column_inner{
+		min-width: auto !important;
+		margin-bottom: 0 !important;
+	}
+}
+
+.navy-overlay-slider .et_pb_slide{
+	position: relative;
+}
+
+.navy-overlay-slider .et_pb_slide *{
+	position: relative;
+	z-index: 3;;
+}
+
+.navy-overlay-slider .et_pb_slide:before{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background: linear-gradient(180deg, rgba(33, 23, 71, 0.1) 0%, rgba(33, 23, 71, 0.75) 47.4%, rgba(33, 23, 71, 0.9) 100%);
+	z-index: 1;
+}
+
+.navy-overlay-slider .et-pb-controllers a{
+	width: 2rem;
+	height: 2rem;
+	border-radius: 100%;
 }
