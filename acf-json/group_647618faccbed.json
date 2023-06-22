@@ -721,72 +721,6 @@
             "endpoint": 0
         },
         {
-            "key": "field_64761be1c7edb",
-            "label": "Testimonials",
-            "name": "testimonials",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Add Row",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_64761bf4c7edc",
-                    "label": "Testimonial Text",
-                    "name": "testimonial_text",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "rows": 2,
-                    "placeholder": "",
-                    "new_lines": "",
-                    "parent_repeater": "field_64761be1c7edb"
-                },
-                {
-                    "key": "field_64761c05c7edd",
-                    "label": "Testimonial Source",
-                    "name": "testimonial_source",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_64761be1c7edb"
-                }
-            ]
-        },
-        {
             "key": "field_64762c6c5d32b",
             "label": "Testimonials",
             "name": "testimonials_content",
@@ -964,5 +898,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1686261277
+    "modified": 1687465778
 }
