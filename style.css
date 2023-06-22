@@ -1249,7 +1249,7 @@ html body #page-container .et_pb_section .button--custom-st.et_pb_button:focus{
 }
 
 .career-card {
-	background: #211747;
+	background: var(--color-deep-purple) !important;
 }
 
 .career-card h3,
@@ -1322,8 +1322,8 @@ html body #page-container .et_pb_section .button--custom-st.et_pb_button:focus{
 
 /* Buttons */
 html body #page-container .et_pb_section .et_pb_button.et_pb_button--navy {
-	color: #211747 !important;
-	border-color: #211747 !important;
+	color: var(--color-deep-purple) !important;
+	border-color: var(--color-deep-purple) !important;
 	background: transparent !important;
 	background-color: transparent !important;
 	transition: 0.25s all ease !important;
@@ -1333,9 +1333,45 @@ html body #page-container .et_pb_section .et_pb_button.et_pb_button--navy:hover,
 html body #page-container .et_pb_section .et_pb_button.et_pb_button--navy:active,
 html body #page-container .et_pb_section .et_pb_button.et_pb_button--navy:focus {
 	color: #fff !important;
-	border-color: #211747 !important;
-	background: #211747 !important;
-	background-color: #211747 !important;
+	border-color: var(--color-deep-purple) !important;
+	background: var(--color-deep-purple) !important;
+	background-color: var(--color-deep-purple) !important;
+}
+
+/*Yellow Button*/
+html body #page-container .et_pb_section .et_pb_button.et_pb_button--yellow {
+	color: var(--color-yellow) !important;
+	border-color: transparent !important;
+	background: transparent !important;
+	background-color: transparent !important;
+	transition: 0.25s all ease !important;
+	position: relative;
+}
+
+html body #page-container .et_pb_section .et_pb_button.et_pb_button--yellow:hover,
+html body #page-container .et_pb_section .et_pb_button.et_pb_button--yellow:active,
+html body #page-container .et_pb_section .et_pb_button.et_pb_button--yellow:focus {
+	color: var(--color-yellow) !important;
+	border-color: transparent !important;
+	background: transparent !important;
+	background-color: transparent !important;
+}
+
+html body #page-container .et_pb_section .et_pb_button.et_pb_button--yellow::after{
+	content: '';
+	display: inline-block;
+	position: relative;
+	margin-left: 0.5rem;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 0 5px 6px;
+	transition: 0.25s all ease;
+	border-color: transparent transparent transparent var(--color-yellow);
+}
+
+html body #page-container .et_pb_section .et_pb_button.et_pb_button--yellow:hover::after{
+	margin-left: 0.7rem;
 }
 
 /* Columns in Special Section */
@@ -1376,4 +1412,36 @@ html body #page-container .et_pb_section .et_pb_button.et_pb_button--navy:focus 
 	width: 2rem;
 	height: 2rem;
 	border-radius: 100%;
+}
+
+/*Overview Template*/
+.section-with-styled-links ul{
+	margin: 1.75rem 0 1.5rem 1rem;
+	list-style: none;
+}
+
+
+.section-with-styled-links ul > li{
+	list-style: none;
+	margin-bottom: 0.7rem;
+}
+
+.section-with-styled-links ul > li > a {
+	font-weight: bold;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	color: var(--color-deep-purple) !important;
+}
+
+.section-with-styled-links ul > li > a:before {
+	content: '';
+	display: inline-block;
+	position: relative;
+	margin-right: 0.5rem;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 5px 0 5px 6px;
+	border-color: transparent transparent transparent var(--color-deep-purple);
 }
