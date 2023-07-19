@@ -121,11 +121,18 @@ add_filter(
 //Add Second Footer Menu
 function register_new_menu() {
     register_nav_menu('footer-secondary-menu',__( 'Footer Secondary Menu' ));
-    }
+}
 add_action( 'init', 'register_new_menu' );
+
+//Add Main Menu Actions
+function register_main_menu_actions_menu() {
+    register_nav_menu('main_menu_actions',__( 'Main Menu Actions' ));
+}
+add_action( 'init', 'register_main_menu_actions_menu' );
 
 //Add Shortcodes
 require_once('shortcodes.php');
+require_once('header-shortcode.php');
 
 //Add Slick Slider
 function enqueue_slick_slider() {
