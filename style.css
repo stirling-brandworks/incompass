@@ -1445,3 +1445,62 @@ html body #page-container .et_pb_section .et_pb_button.et_pb_button--yellow:hove
 	border-width: 5px 0 5px 6px;
 	border-color: transparent transparent transparent var(--color-deep-purple);
 }
+
+/** Custom Header **/
+.menu--actions-wrapper{
+	display: flex;
+}
+
+.menu--actions {
+	color: #fff;
+}
+
+.menu--actions li {
+	list-style: none;
+	display: inline-block;
+	margin-left: 2rem;
+}
+
+@media(min-width:981px){
+	.menu--actions li{
+		margin-left: 2.5rem;
+	}
+}
+
+.menu--actions li:first-child {
+	margin-left: 0;
+}
+
+.menu--actions a,
+.menu--actions button {
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+
+.btn-search {
+	color: #fff;
+	font-size: 1.1rem;
+	font-weight: bold;
+}
+
+/*Menu Toggle*/
+.btn-toggle { 
+	border: 1px solid var(--color-teal);
+	border-radius: 4px;
+	color: #fff;
+	padding: 0.25rem;
+	text-align: center;
+	background:  var(--color-teal);
+	z-index: 30;
+	transition: 0.25s all ease;
+}
+
+.btn-toggle:hover,
+.btn-toggle:active,
+.btn-toggle:focus {
+	background:  #038c87;
+	border-color:  #038c87;
+	cursor: pointer;
+}
+
