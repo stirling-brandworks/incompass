@@ -19,11 +19,11 @@
                 $link = get_sub_field('link');
             ?>
                 <div class="w-md-30 mb-4 text-center">
-                    <a href="<?php echo $link['url']; ?>" class="text-white">
+                    <a href="<?php echo $link['url']; ?>" class="text-white text-yellow-hover">
                         <?php if($image): ?>
                             <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="w-auto h-4 mb-2 mx-auto" />
                         <?php endif; ?>
-                        <h5 class="text-white uppercase mx-0">
+                        <h5 class="text-white text-yellow-hover uppercase mx-0">
                             <span class="mr-1"><?php echo $link['title']; ?></span>
                             <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5.46648 4.29655C5.85216 4.68622 5.85216 5.31378 5.46648 5.70345L1.87346 9.33371C1.245 9.96868 0.162719 9.52365 0.162719 8.63025L0.16272 1.36974C0.16272 0.476352 1.245 0.0313211 1.87346 0.666293L5.46648 4.29655Z" fill="white"/>
