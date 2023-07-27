@@ -1,4 +1,4 @@
-<section class="bg-deep-purple text-white pt-4 pb-8 border-t-4 border-teal relative">
+<section class="bg-deep-purple text-white pt-4 pb-8 border-t-4 border-teal relative  z-1">
     <div class="container text-center relative z-3">
         <?php if( get_field('respite_subtitle') ): ?>
             <h4 class="text-white text-md mb-2"><?php the_field('respite_subtitle'); ?></h4>
