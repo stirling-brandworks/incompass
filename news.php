@@ -13,7 +13,7 @@
 				<?php $featured_img_url = get_the_post_thumbnail_url(get_the_ID(),'large');?>
 				<a href="<?php echo the_permalink();?>" class="news-item--st news-item--st--half news-item--st--img" style="background-image:url(<?php echo esc_url($featured_img_url);?>);">
 			<?php } else {?>
-				<a href="<?php echo the_permalink();?>" class="news-item--st news-item--st--half news-item--st--no-img">
+				<a href="<?php echo the_permalink();?>" class="news-item--st news-item--st--half news-item--st--img" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/placeholder.png);">
 			<?php }?>
 			
 				<div class="news-item--st__cat news-item--st__cat--<?php $category = get_the_category(); echo $category[0]->slug;?>"><?php $category = get_the_category(); echo $category[0]->cat_name;?></div>

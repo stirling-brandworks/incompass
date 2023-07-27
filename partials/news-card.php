@@ -1,9 +1,11 @@
 <div class="card shadow rounded overflow-hidden bg-white mb-4 h-100 border-gray">
-    <?php if (has_post_thumbnail()):?>
-        <a href="<?php echo the_permalink();?>" class="relative" style="height:250px;" >
+    <a href="<?php echo the_permalink();?>" class="relative" style="height:250px;" >
+        <?php if (has_post_thumbnail()):?>
             <img src="<?php the_post_thumbnail_url('large');?>" alt="<?php the_title();?>" class="w-100 object-fit-cover" style="height:250px;" />
-        </a>
-    <?php endif;?>
+        <?php else:?>
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/placeholder.png" alt="<?php the_title();?>" class="w-100 object-fit-cover" style="height:250px;" />
+        <?php endif;?>
+    </a>
     <div class="pt-4 pb-4 px-4">
         <h4 class="text-md-lg text-deep-purple">
             <a class="text-deep-purple text-purple-hover" href="<?php echo the_permalink();?>">
