@@ -5,7 +5,7 @@
 <div id="main-content">
     <?php add_revslider('homepage-hero'); ?>
     <?php get_template_part('partials/home/hero'); ?>
-    <div class="relative bg-white overflow-hidden">
+    <div class="relative bg-white overflow-hidden z-1">
         <div class="relative z-3">
             <?php get_template_part('partials/home/intro'); ?>
             <?php get_template_part('partials/home/programs'); ?>
