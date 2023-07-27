@@ -1504,3 +1504,34 @@ html body #page-container .et_pb_section .et_pb_button.et_pb_button--yellow:hove
 	cursor: pointer;
 }
 
+/*Secondary Menu*/
+.menu--tl {
+	margin-bottom: 1rem;
+	margin-top: -2rem;
+	display: flex;
+}
+
+.menu--tl li {
+	color: #fff;
+	margin-left: 1rem;
+	font-size: 0.9rem;
+	list-style: none;
+}
+
+.menu--tl li:before{
+	content: '|';
+	padding-right: 1rem;
+}
+
+.menu--tl li:first-child {
+	margin-left: 0;
+}
+
+.menu--tl li:first-child:before{
+	display: none;
+}
+
+.menu--tl li a {
+	color: #fff !important;
+	text-decoration: none;
+}

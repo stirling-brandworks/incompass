@@ -36,22 +36,19 @@ function ic_header_menu_shortcode() {
 add_shortcode('ic_header_menu', 'ic_header_menu_shortcode');
 
 //Shortcode for the top menu links
-function ic_top_nav_menu_shortcode() {
-    ob_start(); // Start output buffering
-    ?>
-
-    <nav class="top-nav-menu d-flex flex-items-center flex-justify-end">
-        <?php
-        // Output the navigation menu assigned to "secondary_nav" menu location
-        wp_nav_menu(array(
-            'theme_location' => 'top_nav_menu',
-            'menu_class' => 'menu m-0 p-0',
-            'container' => false,
-        ));
-        ?>
-    </nav>
-
-    <?php
-    return ob_get_clean(); // Return the buffered output
-}
-add_shortcode('ic_top_nav_menu', 'ic_top_nav_menu_shortcode');
+function ic_top_menu_shortcode() {
+	ob_start(); // Start output buffering
+	?>
+	<nav class="menu-top-level d-flex flex-items-center flex-justify-end">
+		<?php
+		wp_nav_menu(array(
+			'theme_location' => 'main_menu_secondary',
+			'menu_class' => 'menu menu--tl m-0 p-0',
+			'container' => false,
+		));
+	?>
+	</nav>
+	<?php
+		return ob_get_clean(); // Return the buffered output
+	}
+add_shortcode('ic_top_menu', 'ic_top_menu_shortcode');

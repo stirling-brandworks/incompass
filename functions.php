@@ -122,7 +122,7 @@ add_filter(
 function register_new_menu() {
     register_nav_menu('footer-secondary-menu',__( 'Footer Secondary Menu' ));
     register_nav_menu('main_menu_actions',__( 'Main Menu Actions' ));
-    register_nav_menu('top_nav_menu',__( 'Top Nav Menu' ));
+    register_nav_menu('main_menu_secondary',__( 'Secondary Main Menu' ));
 }
 
 add_action( 'init', 'register_new_menu' );
